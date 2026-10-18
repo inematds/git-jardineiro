@@ -1,0 +1,5 @@
+.porta
+logs-tmp/
+__pycache__/
+*.mp4
+longrun/*/logs/

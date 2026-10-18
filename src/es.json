@@ -1,0 +1,424 @@
+{
+  "lang": "es",
+  "title": "Git es un jardín",
+  "tagline": "la historia del jardinero",
+  "meta": "Git explicado como un jardín: clone, commit, branch, worktree, merge y push con dibujos, comandos y un video. Gratis, de INEMA.CLUB.",
+  "nav": {
+    "oque": "Qué es",
+    "passos": "Los 6 pasos",
+    "video": "Video",
+    "cola": "Chuleta",
+    "github": "GitHub",
+    "tema": "Cambiar tema",
+    "voltar": "← Guía"
+  },
+  "hero": {
+    "chip": "Git sin miedo · en 6 pasos",
+    "h1": "Git es un <span class=\"amb\">jardín</span>",
+    "lead": "Guarda cada versión de tu trabajo, prueba ideas sin estropear nada y une todo con el equipo.",
+    "cta1": "Empezar por los 6 pasos",
+    "cta2": "Ver en GitHub",
+    "alt": "Banner: Git es un jardín — clone, commit, branch, worktree, merge y push sin miedo"
+  },
+  "resumo_chip": "En resumen",
+  "resumo": "Esta es una guía gratuita que explica Git con la historia de un jardinero. Git es la herramienta que guarda cada versión de un proyecto, como fotos de un jardín tomadas a lo largo del tiempo. Sirve para quien programa, para quien trabaja con agentes de IA y para quien solo quiere dejar de perder archivos. Aquí aprenderás seis comandos (clone, commit, branch, worktree, merge y push), cada uno con un dibujo, una explicación sencilla y los comandos listos para copiar. Para practicar, basta con tener Git instalado.",
+  "oque": {
+    "chip": "Qué es",
+    "h2": "El diccionario del jardinero",
+    "sub": "Antes de los comandos, la metáfora. Cada pieza de Git tiene un lugar en el jardín: guarda esta tabla y lo demás será fácil.",
+    "alt_grade": "Los seis pasos: clone, commit, branch, worktree, merge y push",
+    "cards": [
+      [
+        "🌱",
+        "Jardín = proyecto",
+        "La carpeta entera de tu proyecto, con todo lo que contiene."
+      ],
+      [
+        "🌿",
+        "Plantas = archivos",
+        "Cada archivo que creas, editas o borras."
+      ],
+      [
+        "📸",
+        "Foto = commit",
+        "Una foto de todo el jardín, con fecha y una frase que dice qué cambió."
+      ],
+      [
+        "🏷️",
+        "Etiqueta = branch",
+        "Un nombre que apunta a una foto y avanza junto con las fotos nuevas que tomas."
+      ],
+      [
+        "🪴",
+        "Parcela = worktree",
+        "Otra carpeta del mismo proyecto, para trabajar en dos frentes al mismo tiempo."
+      ],
+      [
+        "🏡",
+        "Invernadero = remoto",
+        "La copia compartida con el equipo, por ejemplo en GitHub."
+      ]
+    ],
+    "img": "02-dicionario.jpg",
+    "img_alt": "Ilustración: jardín visto desde arriba con parcelas, un cuadro con la foto del jardín, una etiqueta en una estaca y el invernadero al fondo"
+  },
+  "fluxo": {
+    "chip": "Cómo funciona",
+    "h2": "Los 6 pasos del jardinero",
+    "sub": "Es el ciclo de cada día: clonas una vez y después repites commit, branch, merge y push. Haz clic en un paso para ver su explicación."
+  },
+  "video": {
+    "chip": "Video",
+    "h2": "Mira la historia del jardinero",
+    "sub": "El video explicativo completo, con dibujos y comandos animados, y el reel corto para enviárselo a quien lo necesite.",
+    "longo": "Video completo (16:9)",
+    "reel": "Reel (9:16)",
+    "baixar": "Descargar MP4"
+  },
+  "cola": {
+    "chip": "Chuleta",
+    "h2": "Los comandos en una sola pantalla",
+    "sub": "Imprime, guarda o déjala abierta junto al terminal.",
+    "frase": "Commit guarda en casa. Push comparte con el equipo.",
+    "linhas": [
+      [
+        "git clone <url> jardin",
+        "traer el proyecto y su historia a tu computadora"
+      ],
+      [
+        "git status",
+        "ver qué cambió y qué está en la bandeja"
+      ],
+      [
+        "git add .",
+        "poner los cambios en la bandeja (área de preparación)"
+      ],
+      [
+        "git commit -m \"frase\"",
+        "tomar la foto: guardar la versión en tu computadora"
+      ],
+      [
+        "git switch -c flores",
+        "crear la etiqueta flores y trabajar en ella"
+      ],
+      [
+        "git worktree add ../jardin-main main",
+        "abrir otra carpeta, en otra branch"
+      ],
+      [
+        "git merge flores",
+        "unir la branch flores con la branch actual"
+      ],
+      [
+        "git push origin main",
+        "llevar tus fotos al invernadero"
+      ],
+      [
+        "git fetch",
+        "descargar la nueva historia del invernadero, sin unirla"
+      ],
+      [
+        "git pull",
+        "descargar y unirla enseguida con tu branch"
+      ]
+    ]
+  },
+  "passo": "Paso",
+  "comandos": "Comandos",
+  "metafora": "En el jardín",
+  "na_pratica": "En la práctica",
+  "dica": "Atención",
+  "grafico": "Cómo queda la historia",
+  "anterior": "← Anterior",
+  "proximo": "Siguiente:",
+  "conceitos": [
+    {
+      "slug": "clone",
+      "nome": "Clone",
+      "titulo": "Traer el jardín a casa",
+      "img": "03-clone.jpg",
+      "img_alt": "Ilustración: una cinta azul lleva la foto del jardín desde el invernadero hasta la laptop del jardinero",
+      "resumo": "Clone copia el proyecto y toda su historia en tu computadora.",
+      "metafora": "Vas al invernadero y traes una copia de todo el jardín, con todas las fotos que se han tomado. El invernadero sigue allí, intacto.",
+      "texto": [
+        "El comando git clone descarga el repositorio remoto: los archivos actuales y todo el historial de commits. En tu computadora aparece una carpeta lista para editar, llamada carpeta de trabajo (working tree).",
+        "No tocas el invernadero. Trabajas en tu copia, con calma, y solo después decides qué compartir."
+      ],
+      "cmds": [
+        [
+          "git clone <url-do-repo> jardin",
+          "copia el proyecto y su historia"
+        ],
+        [
+          "cd jardin",
+          "entra en la carpeta de trabajo"
+        ]
+      ],
+      "dica": "Se hace clone una vez por proyecto. Después, para obtener las novedades del equipo, usa git pull.",
+      "graph": {
+        "main": [
+          "A"
+        ],
+        "labels": {
+          "A": "jardín inicial"
+        }
+      }
+    },
+    {
+      "slug": "commit",
+      "nome": "Commit",
+      "titulo": "Tomar la foto del jardín",
+      "img": "04-commit.jpg",
+      "img_alt": "Ilustración: el jardinero coloca un camino de piedras, con una bandeja de plantas y un armario de fotos al lado",
+      "resumo": "Edita, elige qué incluir y toma la foto. Commit la guarda en tu computadora.",
+      "metafora": "Plantas, arrancas y haces un camino de piedras. Después pones en la bandeja solo lo que quieres mostrar y tomas la foto, que va al armario de fotos.",
+      "texto": [
+        "Hay tres lugares: la carpeta de trabajo (donde editas), el área de preparación, o staging area (la bandeja con lo que irá en la foto) y el historial local (el armario con las fotos, los commits).",
+        "git add pone los cambios en la bandeja. git commit toma la foto de lo que está en la bandeja y la guarda con una frase. git status muestra, en cualquier momento, qué cambió y qué ya está en la bandeja."
+      ],
+      "cmds": [
+        [
+          "git status",
+          "¿qué cambió?"
+        ],
+        [
+          "git add .",
+          "todo a la bandeja"
+        ],
+        [
+          "git commit -m \"Añade el camino\"",
+          "toma la foto B"
+        ]
+      ],
+      "dica": "Un commit no envía nada a nadie. Solo lo guarda en tu computadora.",
+      "graph": {
+        "main": [
+          "A",
+          "B"
+        ],
+        "labels": {
+          "A": "jardín inicial",
+          "B": "camino"
+        }
+      }
+    },
+    {
+      "slug": "branch",
+      "nome": "Branch",
+      "titulo": "Probar una idea nueva",
+      "img": "05-branch.jpg",
+      "img_alt": "Ilustración: el jardinero planta una nueva parcela de flores, marcada con una etiqueta morada",
+      "resumo": "Branch es una etiqueta que avanza junto con tus nuevos commits.",
+      "metafora": "Se te ocurre una parcela de flores. En vez de arriesgar el jardín principal, cuelgas una etiqueta nueva, flores, y trabajas en ella.",
+      "texto": [
+        "Una branch es solo un nombre que apunta a un commit. Cuando haces un commit nuevo, la branch en la que estás avanza junto con él. Las demás se quedan quietas.",
+        "HEAD indica dónde estás trabajando ahora. Con git switch -c flores creas la branch flores y pasas a ella. Si la idea no funciona, vuelve a main con git switch main."
+      ],
+      "cmds": [
+        [
+          "git switch -c flores",
+          "crea la etiqueta flores y pasa a ella"
+        ],
+        [
+          "git add . && git commit -m \"Flores (1)\"",
+          "commit D"
+        ],
+        [
+          "git commit -am \"Más flores (2)\"",
+          "commit E"
+        ]
+      ],
+      "dica": "HEAD → flores quiere decir: los próximos commits irán a la branch flores.",
+      "graph": {
+        "main": [
+          "A",
+          "B"
+        ],
+        "side": [
+          "D",
+          "E"
+        ],
+        "from": "B",
+        "side_name": "flores",
+        "labels": {
+          "A": "inicial",
+          "B": "camino",
+          "D": "flores 1",
+          "E": "flores 2"
+        }
+      }
+    },
+    {
+      "slug": "worktree",
+      "nome": "Worktree",
+      "titulo": "Dos parcelas al mismo tiempo",
+      "img": "06-worktree.jpg",
+      "img_alt": "Ilustración: dos parcelas conectadas al mismo armario de fotos; en una se plantan flores y en la otra se repara la cerca",
+      "resumo": "Worktree es otra carpeta del mismo proyecto, abierta en otra branch.",
+      "metafora": "En medio de las flores, se rompe la cerca y hay que repararla enseguida. Abres una segunda parcela: en una sigues con las flores y en la otra reparas la cerca.",
+      "texto": [
+        "git worktree add crea una segunda carpeta de trabajo conectada al mismo repositorio. Las dos carpetas comparten la misma historia (la misma carpeta .git), pero cada una tiene su propia área de preparación y su branch.",
+        "Es ideal para atender una urgencia sin dejar lo que estás haciendo y para dejar a un agente de IA trabajando en una carpeta mientras tú trabajas en la otra."
+      ],
+      "cmds": [
+        [
+          "git worktree add ../jardin-main main",
+          "abre main en otra carpeta"
+        ],
+        [
+          "cd ../jardin-main",
+          "ve allí"
+        ],
+        [
+          "git commit -am \"Repara la cerca\"",
+          "commit C en main"
+        ]
+      ],
+      "dica": "Una misma branch no puede estar abierta en dos carpetas al mismo tiempo.",
+      "graph": {
+        "main": [
+          "A",
+          "B",
+          "C"
+        ],
+        "side": [
+          "D",
+          "E"
+        ],
+        "from": "B",
+        "side_name": "flores",
+        "labels": {
+          "A": "inicial",
+          "B": "camino",
+          "C": "cerca",
+          "D": "flores 1",
+          "E": "flores 2"
+        }
+      }
+    },
+    {
+      "slug": "merge",
+      "nome": "Merge",
+      "titulo": "Unir los cambios",
+      "img": "07-merge.jpg",
+      "img_alt": "Ilustración: dos caminos de piedras se encuentran y se convierten en uno en el jardín",
+      "resumo": "Merge une dos historias en un commit nuevo.",
+      "metafora": "La cerca está reparada y las flores quedaron preciosas. Ahora los dos caminos se encuentran: un solo jardín, con todo.",
+      "texto": [
+        "En main, git merge flores une la historia de la branch flores. Git crea el commit M, que tiene dos padres: el último de main y el último de flores.",
+        "Si los dos cambios afectan la misma parte, aparece un conflicto. Sin pánico: abre el archivo, elige cómo queda y después ejecuta git add y git commit. Por último, prueba todo el jardín junto."
+      ],
+      "cmds": [
+        [
+          "git switch main",
+          "vuelve a main"
+        ],
+        [
+          "git merge flores",
+          "une las flores (commit M)"
+        ],
+        [
+          "# en conflicto: edita, después",
+          ""
+        ],
+        [
+          "git add . && git commit",
+          "termina el merge"
+        ]
+      ],
+      "dica": "Que merge haya terminado no significa que esté probado. Ejecuta el proyecto antes de compartirlo.",
+      "graph": {
+        "main": [
+          "A",
+          "B",
+          "C",
+          "M"
+        ],
+        "side": [
+          "D",
+          "E"
+        ],
+        "from": "B",
+        "into": "M",
+        "side_name": "flores",
+        "labels": {
+          "A": "inicial",
+          "B": "camino",
+          "C": "cerca",
+          "M": "merge",
+          "D": "flores 1",
+          "E": "flores 2"
+        }
+      }
+    },
+    {
+      "slug": "push",
+      "nome": "Push",
+      "titulo": "Compartir con el equipo",
+      "img": "08-push.jpg",
+      "img_alt": "Ilustración: el jardinero lleva un carrito de fotos hasta el invernadero, donde lo recibe su compañera",
+      "resumo": "Push lleva tus commits al remoto. Ahora el equipo puede obtenerlos.",
+      "metafora": "Hasta aquí todo se quedó en casa. Ahora llevas el carrito de fotos hasta el invernadero y tu compañera ya ve el jardín nuevo.",
+      "texto": [
+        "git push envía tus commits al repositorio remoto y actualiza allí la branch. Después de eso, el equipo ve la misma historia que tú.",
+        "El camino de vuelta: git fetch descarga la nueva historia del invernadero sin tocar tus archivos; git pull la descarga y la une enseguida con la branch en la que estás."
+      ],
+      "cmds": [
+        [
+          "git push origin main",
+          "envía main al invernadero"
+        ],
+        [
+          "git fetch",
+          "solo descarga la nueva historia"
+        ],
+        [
+          "git pull",
+          "descarga y une"
+        ]
+      ],
+      "dica": "Commit guarda en casa. Push comparte con el equipo.",
+      "graph": {
+        "main": [
+          "A",
+          "B",
+          "C",
+          "M"
+        ],
+        "side": [
+          "D",
+          "E"
+        ],
+        "from": "B",
+        "into": "M",
+        "side_name": "flores",
+        "remote": true,
+        "labels": {
+          "A": "inicial",
+          "B": "camino",
+          "C": "cerca",
+          "M": "merge",
+          "D": "flores 1",
+          "E": "flores 2"
+        }
+      }
+    }
+  ],
+  "graph_txt": {
+    "remote": "invernadero (origin/main) después de push"
+  },
+  "fim": {
+    "img": "09-ciclo.jpg",
+    "alt": "Ilustración: todo el jardín conectado por un camino circular, con los dos jardineros saludando",
+    "h2": "El ciclo de cada día",
+    "texto": "Clona una vez. Después: commit todo el tiempo, branch para cada idea, worktree cuando necesites dos frentes, merge para unir y push para compartir."
+  },
+  "footer": {
+    "nota": "contenido propio y gratuito",
+    "stack": [
+      "Git",
+      "HTML estático",
+      "explicavideos"
+    ]
+  }
+}

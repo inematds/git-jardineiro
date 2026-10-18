@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Push — Share with the team · Git is a garden</title>
+<meta name="description" content="Push sends your commits to the remote. Now the team can get them.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/git-jardineiro/guia/push/"><link rel="alternate" hreflang="en" href="https://inematds.github.io/git-jardineiro/guia/en/push/"><link rel="alternate" hreflang="es" href="https://inematds.github.io/git-jardineiro/guia/es/push/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#FACC15; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#a16207; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(250,204,21,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(250,204,21,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(250,204,21,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div,.card{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+</style>
+
+<style>
+  .concepts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:820px){.concepts{grid-template-columns:1fr 1fr}} @media(max-width:540px){.concepts{grid-template-columns:1fr}}
+  .cc{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;color:var(--txt);transition:border-color .2s,transform .2s}
+  .cc:hover{border-color:var(--amb);transform:translateY(-2px)}
+  .cc img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .cc .t{padding:14px 16px 16px} .cc h3{font-size:1.05rem;margin:.25em 0 .3em} .cc p{color:var(--mut);font-size:.9rem;margin:0}
+  .ill{margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line)} .ill img{width:100%;display:block}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px} @media(max-width:820px){.two{grid-template-columns:1fr}}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .box h3{font-size:1rem;margin-bottom:.5em} .box p{color:var(--mut);margin:.2em 0 .8em}
+  .tip{border-left:3px solid var(--amb);background:rgba(250,204,21,.08);padding:12px 16px;border-radius:0 10px 10px 0;margin:18px 0 0}
+  .graph{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;overflow-x:auto}
+  .graph svg{display:block;min-width:520px;width:100%;height:auto}
+  .graph .n{opacity:0;animation:pop .45s ease-out forwards} .graph .e{stroke-dasharray:200;stroke-dashoffset:200;animation:draw .6s ease-out forwards}
+  @keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}} @keyframes draw{to{stroke-dashoffset:0}}
+  @media(prefers-reduced-motion:reduce){.graph .n,.graph .e{animation:none;opacity:1;stroke-dashoffset:0}}
+  table.cola{width:100%;border-collapse:collapse;font-size:.92rem} table.cola td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.cola td:first-child{font-family:"JetBrains Mono",monospace;color:var(--amb2);white-space:nowrap} @media(max-width:600px){table.cola td:first-child{white-space:normal;overflow-wrap:anywhere}}
+  .pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:34px}
+  .vids{display:grid;grid-template-columns:2fr 1fr;gap:20px;align-items:start} @media(max-width:820px){.vids{grid-template-columns:1fr}}
+  .vids video{width:100%;border-radius:14px;border:1px solid var(--line);background:#000;display:block}
+  .vids .v916 video{max-width:360px;margin:0 auto}
+  .vids h3{font-size:1rem;margin:0 0 .6em} .vids p{margin:.6em 0 0;font-size:.88rem}
+  .bignum{font-family:Sora;font-weight:800;font-size:3.2rem;color:var(--amb);line-height:1}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="../../en/"><span class="emoji">🌱</span> Git is a garden</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="../../en/#oque">What it is</a><a class="sec" href="../../en/#passos">The 6 steps</a><a class="sec" href="../../en/#cola">Cheat sheet</a>
+    <span class="lang"><a href="../../push/">PT</a><a class="on" href="../../en/push/">EN</a><a href="../../es/push/">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Switch theme" title="Switch theme">🌙</button>
+    <a class="btn" href="https://github.com/inematds/git-jardineiro" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top" style="border-bottom:none"><div class="glow"></div>
+  <div class="wrap" style="grid-template-columns:1fr;padding-bottom:20px">
+    <div><span class="chip">Step 6 / 6 · Push</span>
+      <h1>Push: <span class="amb">share with the team</span></h1>
+      <p class="lead" style="max-width:60ch">Push sends your commits to the remote. Now the team can get them.</p></div>
+  </div>
+</header>
+<section style="padding-top:10px"><div class="wrap">
+  <figure class="ill"><img src="../../assets/08-push.jpg" alt="Illustration: the gardener takes a cart of photos to the greenhouse, where a teammate greets them"></figure>
+  <div class="two">
+    <div class="box"><span class="chip">In the garden</span><p style="color:var(--txt);font-size:1.05rem;margin-top:.6em">So far, everything has stayed at home. Now you take the cart of photos to the greenhouse, and your teammate can see the new garden.</p></div>
+    <div class="box"><span class="chip">In practice</span><p>git push sends your commits to the remote repository and updates the branch there. After that, the team can see the same history as you.</p><p>The way back: git fetch downloads the greenhouse's new history without changing your files; git pull downloads it and brings it into the branch you are on.</p></div>
+  </div>
+  <h3 style="margin:30px 0 12px">Commands</h3>
+  <pre><span class="k">git push origin main</span>  <span class="c"># send main to the greenhouse</span>
+<span class="k">git fetch</span>  <span class="c"># only download the new history</span>
+<span class="k">git pull</span>  <span class="c"># download and bring it in</span></pre>
+  <p class="tip"><strong>Tip:</strong> Commit saves at home. Push shares with the team.</p>
+  <h3 style="margin:30px 0 12px">What the history looks like</h3>
+  <div class="graph"><svg viewBox="0 0 588 265" role="img" aria-label="A → B → C → M" style="color:var(--txt)"><path class="e" d="M50,50 L160,50" stroke="#FACC15" stroke-width="4" fill="none" style="animation-delay:0.35s"/><path class="e" d="M160,50 L270,50" stroke="#FACC15" stroke-width="4" fill="none" style="animation-delay:0.70s"/><path class="e" d="M160,50 C209.5,50 209.5,135 259.0,135" stroke="#a78bfa" stroke-width="4" fill="none" style="animation-delay:1.05s"/><path class="e" d="M259.0,135 L358.0,135" stroke="#a78bfa" stroke-width="4" fill="none" style="animation-delay:1.40s"/><path class="e" d="M270,50 L468.0,50" stroke="#FACC15" stroke-width="4" fill="none" style="animation-delay:1.75s"/><path class="e" d="M358.0,135 C413.0,135 413.0,50 468.0,50" stroke="#a78bfa" stroke-width="4" fill="none" style="animation-delay:1.75s"/><g class="n" style="animation-delay:0.00s;transform-origin:50px 50px"><circle cx="50" cy="50" r="17" fill="#FACC15"/><text x="50" y="55" text-anchor="middle" font-family="Sora" font-weight="800" font-size="15" fill="#1a1206">A</text><text x="50" y="88" text-anchor="middle" font-family="Inter" font-size="13" fill="currentColor" opacity=".75">first</text></g><g class="n" style="animation-delay:0.35s;transform-origin:160px 50px"><circle cx="160" cy="50" r="17" fill="#FACC15"/><text x="160" y="55" text-anchor="middle" font-family="Sora" font-weight="800" font-size="15" fill="#1a1206">B</text><text x="160" y="88" text-anchor="middle" font-family="Inter" font-size="13" fill="currentColor" opacity=".75">path</text></g><g class="n" style="animation-delay:0.70s;transform-origin:270px 50px"><circle cx="270" cy="50" r="17" fill="#FACC15"/><text x="270" y="55" text-anchor="middle" font-family="Sora" font-weight="800" font-size="15" fill="#1a1206">C</text><text x="270" y="88" text-anchor="middle" font-family="Inter" font-size="13" fill="currentColor" opacity=".75">fence</text></g><g class="n" style="animation-delay:1.05s;transform-origin:259.0px 135px"><circle cx="259.0" cy="135" r="17" fill="#a78bfa"/><text x="259.0" y="140" text-anchor="middle" font-family="Sora" font-weight="800" font-size="15" fill="#1a1206">D</text><text x="259.0" y="173" text-anchor="middle" font-family="Inter" font-size="13" fill="currentColor" opacity=".75">flowers 1</text></g><g class="n" style="animation-delay:1.40s;transform-origin:358.0px 135px"><circle cx="358.0" cy="135" r="17" fill="#a78bfa"/><text x="358.0" y="140" text-anchor="middle" font-family="Sora" font-weight="800" font-size="15" fill="#1a1206">E</text><text x="358.0" y="173" text-anchor="middle" font-family="Inter" font-size="13" fill="currentColor" opacity=".75">flowers 2</text></g><g class="n" style="animation-delay:1.75s;transform-origin:468.0px 50px"><circle cx="468.0" cy="50" r="17" fill="#FACC15"/><text x="468.0" y="55" text-anchor="middle" font-family="Sora" font-weight="800" font-size="15" fill="#1a1206">M</text><text x="468.0" y="88" text-anchor="middle" font-family="Inter" font-size="13" fill="currentColor" opacity=".75">merge</text></g><g class="n" style="animation-delay:2.10s"><rect x="492.0" y="3" width="48.0" height="24" rx="6" fill="none" stroke="#FACC15" stroke-width="2"/><text x="516.0" y="20" text-anchor="middle" font-family="Sora" font-weight="600" font-size="13" fill="#FACC15">main</text></g><g class="n" style="animation-delay:2.40s"><path d="M468.0,72 L468.0,219" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6 6" fill="none"/><text x="468.0" y="239" text-anchor="middle" font-family="Sora" font-weight="600" font-size="14" fill="#38bdf8">greenhouse (origin/main) after push</text></g></svg></div>
+  <div class="pager"><a class="btn ghost" href="../merge/">← Previous Merge</a><a class="btn" href="../#cola">All the commands on one screen →</a></div>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">Git</div><div class="pill">static HTML</div><div class="pill">explicavideos</div>
+    <p style="margin-top:18px">Git is a garden · original and free content ·
+      <a href="https://github.com/inematds/git-jardineiro">inematds/git-jardineiro</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+<script>
+  (function(){
+    var KEY='git-jardineiro-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    try{ if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; } }catch(e){}
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      try{ localStorage.setItem(KEY, light?'light':'dark'); }catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>
