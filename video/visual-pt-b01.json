@@ -1,0 +1,925 @@
+{
+ "block": "pt-b01",
+ "scenes": {
+  "1": {
+   "header": false,
+   "shots": [
+    {
+     "type": "hook",
+     "at": "@start",
+     "text": "Git explicado como um **jardim**",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/01-capa-hook.png"
+    },
+    {
+     "type": "keyword",
+     "at": "Esses seis comandos",
+     "text": "6 comandos",
+     "sub": "o **coração** do Git",
+     "sub_at": "coração do Git"
+    },
+    {
+     "type": "media",
+     "at": "pensar num jardim",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/02-dicionario.png",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "label": "o Git é um **jardim**",
+     "calm": true
+    },
+    {
+     "type": "timeline",
+     "at": "Neste vídeo eu explico",
+     "events": [
+      {
+       "label": "Clone",
+       "sub": "trazer pra casa",
+       "at": "trazer o jardim"
+      },
+      {
+       "label": "Commit",
+       "sub": "a foto",
+       "at": "tirar a foto"
+      },
+      {
+       "label": "Branch",
+       "sub": "ideia nova",
+       "at": "testar uma ideia"
+      },
+      {
+       "label": "Worktree",
+       "sub": "dois canteiros",
+       "at": "dois canteiros"
+      },
+      {
+       "label": "Merge",
+       "sub": "juntar",
+       "at": "juntar tudo"
+      },
+      {
+       "label": "Push",
+       "sub": "compartilhar",
+       "at": "compartilhar com a equipe"
+      }
+     ]
+    },
+    {
+     "type": "media",
+     "at": "no fim eu mostro",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/09-ciclo.png",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "label": "no fim: **o ciclo completo**",
+     "calm": true
+    }
+   ],
+   "takeaway": "Seis comandos guardam cada versão do seu projeto."
+  },
+  "2": {
+   "shots": [
+    {
+     "type": "fields",
+     "at": "Primeiro, o dicionário",
+     "title": "Dicionário do jardineiro",
+     "fields": [
+      {
+       "label": "Jardim",
+       "value": "projeto",
+       "at": "O jardim é"
+      },
+      {
+       "label": "Plantas",
+       "value": "arquivos",
+       "at": "As plantas são"
+      },
+      {
+       "label": "Foto",
+       "value": "commit",
+       "at": "Cada commit é"
+      },
+      {
+       "label": "Etiqueta",
+       "value": "branch",
+       "at": "A branch é"
+      },
+      {
+       "label": "Estufa",
+       "value": "remoto (GitHub)",
+       "at": "tem uma estufa"
+      }
+     ]
+    },
+    {
+     "type": "media",
+     "at": "repositório remoto",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/02-dicionario.png",
+     "focus": [
+      0.62,
+      0.22
+     ],
+     "zoom": [
+      1.15,
+      1.22
+     ],
+     "label": "a estufa = **repositório remoto**",
+     "calm": true
+    }
+   ],
+   "takeaway": "Projeto é o jardim; commit é a foto do jardim inteiro."
+  },
+  "3": {
+   "shots": [
+    {
+     "type": "media",
+     "at": "Passo um",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/03-clone.png",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "label": "**1 · Clone**",
+     "calm": true
+    },
+    {
+     "type": "media",
+     "at": "vai até a estufa",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/03-clone.png",
+     "focus": [
+      0.2,
+      0.35
+     ],
+     "zoom": [
+      1.18,
+      1.22
+     ],
+     "label": "a estufa = **remoto**",
+     "calm": true,
+     "cont": true,
+     "from": {
+      "focus": [
+       0.5,
+       0.5
+      ],
+      "zoom": 1.06
+     }
+    },
+    {
+     "type": "terminal",
+     "at": "O comando git clone",
+     "title": "terminal",
+     "lines": [
+      {
+       "type": "cmd",
+       "text": "git clone <url-do-repo> jardim",
+       "at": "git clone copia"
+      },
+      {
+       "type": "out",
+       "text": "Cloning into 'jardim'... done.",
+       "at": "toda a história"
+      },
+      {
+       "type": "cmd",
+       "text": "cd jardim",
+       "at": "aparece uma pasta"
+      },
+      {
+       "type": "comment",
+       "text": "# arquivos prontos pra editar",
+       "at": "prontos pra editar"
+      }
+     ]
+    },
+    {
+     "type": "media",
+     "at": "Repare",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/03-clone.png",
+     "focus": [
+      0.78,
+      0.55
+     ],
+     "zoom": [
+      1.15,
+      1.2
+     ],
+     "label": "você mexe **na sua cópia**",
+     "calm": true
+    }
+   ],
+   "takeaway": "Clone copia o projeto e toda a história para o seu computador."
+  },
+  "4": {
+   "shots": [
+    {
+     "type": "media",
+     "at": "Passo dois",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/04-commit.png",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "label": "**2 · Commit**",
+     "calm": true
+    },
+    {
+     "type": "media",
+     "at": "caminho de pedras",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/04-commit.png",
+     "focus": [
+      0.25,
+      0.7
+     ],
+     "zoom": [
+      1.18,
+      1.22
+     ],
+     "label": "editar = **plantar**",
+     "calm": true,
+     "cont": true,
+     "from": {
+      "focus": [
+       0.5,
+       0.5
+      ],
+      "zoom": 1.06
+     }
+    },
+    {
+     "type": "flow",
+     "at": "Depois você escolhe",
+     "nodes": [
+      {
+       "id": "ed",
+       "label": "editar",
+       "col": 0,
+       "row": 1,
+       "at": "Depois você escolhe",
+       "icon": "pencil"
+      },
+      {
+       "id": "add",
+       "label": "git add",
+       "col": 1,
+       "row": 1,
+       "at": "com git add",
+       "icon": "check"
+      },
+      {
+       "id": "bd",
+       "label": "bandeja (preparo)",
+       "col": 2,
+       "row": 1,
+       "at": "numa bandeja",
+       "icon": "box"
+      },
+      {
+       "id": "cm",
+       "label": "git commit",
+       "col": 3,
+       "row": 1,
+       "at": "Aí o git commit",
+       "icon": "git"
+      },
+      {
+       "id": "hs",
+       "label": "histórico",
+       "col": 4,
+       "row": 1,
+       "at": "no seu histórico",
+       "icon": "clock"
+      }
+     ],
+     "edges": [
+      {
+       "from": "ed",
+       "to": "add",
+       "at": "com git add"
+      },
+      {
+       "from": "add",
+       "to": "bd",
+       "at": "numa bandeja"
+      },
+      {
+       "from": "bd",
+       "to": "cm",
+       "at": "Aí o git commit"
+      },
+      {
+       "from": "cm",
+       "to": "hs",
+       "at": "no seu histórico"
+      }
+     ]
+    },
+    {
+     "type": "terminal",
+     "at": "O git status",
+     "title": "terminal",
+     "lines": [
+      {
+       "type": "cmd",
+       "text": "git status",
+       "at": "O git status"
+      },
+      {
+       "type": "cmd",
+       "text": "git add .",
+       "at": "o que mudou"
+      },
+      {
+       "type": "cmd",
+       "text": "git commit -m \"Adiciona o caminho\"",
+       "at": "a qualquer momento"
+      }
+     ]
+    },
+    {
+     "type": "statement",
+     "at": "E atenção",
+     "text": "Commit **não envia** nada",
+     "then": {
+      "text": "salva **só no seu computador**",
+      "at": "salva só no"
+     }
+    }
+   ],
+   "takeaway": "Edite, separe o que entra e tire a foto. Commit não envia nada."
+  },
+  "5": {
+   "shots": [
+    {
+     "type": "media",
+     "at": "Passo três",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/05-branch.png",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "label": "**3 · Branch**",
+     "calm": true
+    },
+    {
+     "type": "media",
+     "at": "Bateu uma ideia",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/05-branch.png",
+     "focus": [
+      0.62,
+      0.22
+     ],
+     "zoom": [
+      1.18,
+      1.22
+     ],
+     "label": "uma **ideia nova**",
+     "calm": true,
+     "cont": true,
+     "from": {
+      "focus": [
+       0.5,
+       0.5
+      ],
+      "zoom": 1.06
+     }
+    },
+    {
+     "type": "terminal",
+     "at": "Com git switch",
+     "title": "terminal",
+     "lines": [
+      {
+       "type": "cmd",
+       "text": "git switch -c flores",
+       "at": "Com git switch"
+      },
+      {
+       "type": "comment",
+       "text": "# etiqueta nova: flores (HEAD → flores)",
+       "at": "cria uma etiqueta"
+      }
+     ]
+    },
+    {
+     "type": "flow",
+     "at": "Cada foto nova",
+     "nodes": [
+      {
+       "id": "A",
+       "label": "A · inicial",
+       "col": 0,
+       "row": 1,
+       "at": "Cada foto nova"
+      },
+      {
+       "id": "B",
+       "label": "B · main",
+       "col": 1,
+       "row": 1,
+       "at": "Cada foto nova"
+      },
+      {
+       "id": "D",
+       "label": "D · flores",
+       "col": 2,
+       "row": 2,
+       "at": "faz a etiqueta"
+      },
+      {
+       "id": "E",
+       "label": "E · flores",
+       "col": 3,
+       "row": 2,
+       "at": "andar junto"
+      }
+     ],
+     "edges": [
+      {
+       "from": "A",
+       "to": "B",
+       "at": "Cada foto nova"
+      },
+      {
+       "from": "B",
+       "to": "D",
+       "at": "faz a etiqueta"
+      },
+      {
+       "from": "D",
+       "to": "E",
+       "at": "andar junto"
+      }
+     ]
+    },
+    {
+     "type": "media",
+     "at": "Se a ideia",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/05-branch.png",
+     "focus": [
+      0.5,
+      0.6
+     ],
+     "zoom": [
+      1.05,
+      1.12
+     ],
+     "label": "não deu certo? **é só voltar**",
+     "calm": true
+    }
+   ],
+   "takeaway": "Branch é uma etiqueta que anda com os seus commits novos."
+  },
+  "6": {
+   "shots": [
+    {
+     "type": "media",
+     "at": "Passo quatro",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/06-worktree.png",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "label": "**4 · Worktree**",
+     "calm": true
+    },
+    {
+     "type": "media",
+     "at": "a cerca quebrou",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/06-worktree.png",
+     "focus": [
+      0.82,
+      0.45
+     ],
+     "zoom": [
+      1.18,
+      1.22
+     ],
+     "label": "urgência: **a cerca**",
+     "calm": true,
+     "cont": true,
+     "from": {
+      "focus": [
+       0.5,
+       0.5
+      ],
+      "zoom": 1.06
+     }
+    },
+    {
+     "type": "terminal",
+     "at": "Em vez de largar",
+     "title": "terminal",
+     "lines": [
+      {
+       "type": "cmd",
+       "text": "git worktree add ../jardim-main main",
+       "at": "uma segunda pasta"
+      },
+      {
+       "type": "cmd",
+       "text": "cd ../jardim-main",
+       "at": "na outra você"
+      },
+      {
+       "type": "comment",
+       "text": "# conserta a cerca na main",
+       "at": "conserta a cerca"
+      }
+     ]
+    },
+    {
+     "type": "compare",
+     "at": "As duas usam",
+     "left": {
+      "title": "jardim/ → flores",
+      "at": "As duas usam",
+      "tone": "neutral",
+      "lines": [
+       {
+        "text": "plantando flores",
+        "at": "mesma história"
+       },
+       {
+        "text": "bandeja própria",
+        "at": "cada uma tem"
+       }
+      ]
+     },
+     "right": {
+      "title": "jardim-main/ → main",
+      "at": "mesma história",
+      "tone": "neutral",
+      "lines": [
+       {
+        "text": "consertando a cerca",
+        "at": "cada uma tem"
+       },
+       {
+        "text": "bandeja própria",
+        "at": "própria bandeja"
+       }
+      ]
+     },
+     "verdict": {
+      "text": "um **agente de IA** numa pasta, você na outra",
+      "at": "agente de IA"
+     }
+    }
+   ],
+   "takeaway": "Worktree é outra pasta do mesmo projeto, em outra branch."
+  },
+  "7": {
+   "shots": [
+    {
+     "type": "media",
+     "at": "Passo cinco",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/07-merge.png",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "label": "**5 · Merge**",
+     "calm": true
+    },
+    {
+     "type": "terminal",
+     "at": "Agora você volta",
+     "title": "terminal",
+     "lines": [
+      {
+       "type": "cmd",
+       "text": "git switch main",
+       "at": "volta pra main"
+      },
+      {
+       "type": "cmd",
+       "text": "git merge flores",
+       "at": "roda git merge"
+      }
+     ]
+    },
+    {
+     "type": "flow",
+     "at": "O Git junta",
+     "nodes": [
+      {
+       "id": "A",
+       "label": "A",
+       "col": 0,
+       "row": 1,
+       "at": "O Git junta"
+      },
+      {
+       "id": "B",
+       "label": "B",
+       "col": 1,
+       "row": 1,
+       "at": "O Git junta"
+      },
+      {
+       "id": "C",
+       "label": "C · cerca",
+       "col": 2,
+       "row": 1,
+       "at": "duas histórias"
+      },
+      {
+       "id": "D",
+       "label": "D · flores",
+       "col": 2,
+       "row": 2,
+       "at": "duas histórias"
+      },
+      {
+       "id": "E",
+       "label": "E · flores",
+       "col": 3,
+       "row": 2,
+       "at": "duas histórias"
+      },
+      {
+       "id": "M",
+       "label": "M · merge",
+       "col": 4,
+       "row": 1,
+       "at": "commit novo",
+       "icon": "git"
+      }
+     ],
+     "edges": [
+      {
+       "from": "A",
+       "to": "B",
+       "at": "O Git junta"
+      },
+      {
+       "from": "B",
+       "to": "C",
+       "at": "duas histórias"
+      },
+      {
+       "from": "B",
+       "to": "D",
+       "at": "duas histórias"
+      },
+      {
+       "from": "D",
+       "to": "E",
+       "at": "duas histórias"
+      },
+      {
+       "from": "C",
+       "to": "M",
+       "at": "commit novo"
+      },
+      {
+       "from": "E",
+       "to": "M",
+       "at": "liga os dois"
+      }
+     ]
+    },
+    {
+     "type": "steps",
+     "at": "Às vezes as duas",
+     "goal": "Conflito? **sem pânico**",
+     "steps": [
+      {
+       "title": "escolha como fica",
+       "at": "você escolhe"
+      },
+      {
+       "title": "git add",
+       "at": "faz git add"
+      },
+      {
+       "title": "git commit",
+       "at": "e git commit"
+      }
+     ],
+     "done_at": "e pronto"
+    },
+    {
+     "type": "media",
+     "at": "teste o jardim",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/07-merge.png",
+     "focus": [
+      0.5,
+      0.7
+     ],
+     "zoom": [
+      1.12,
+      1.18
+     ],
+     "label": "merge feito ≠ **merge testado**",
+     "calm": true
+    }
+   ],
+   "takeaway": "Merge junta duas histórias num commit novo."
+  },
+  "8": {
+   "shots": [
+    {
+     "type": "media",
+     "at": "Passo seis",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/08-push.png",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "label": "**6 · Push**",
+     "calm": true
+    },
+    {
+     "type": "terminal",
+     "at": "O git push leva",
+     "title": "terminal",
+     "lines": [
+      {
+       "type": "cmd",
+       "text": "git push origin main",
+       "at": "O git push leva"
+      },
+      {
+       "type": "out",
+       "text": "main -> main",
+       "at": "atualiza a branch"
+      }
+     ]
+    },
+    {
+     "type": "media",
+     "at": "Agora a equipe",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/08-push.png",
+     "focus": [
+      0.72,
+      0.45
+     ],
+     "zoom": [
+      1.15,
+      1.22
+     ],
+     "label": "a equipe **recebe**",
+     "calm": true
+    },
+    {
+     "type": "compare",
+     "at": "o caminho de volta",
+     "left": {
+      "title": "git fetch",
+      "at": "git fetch baixa",
+      "tone": "neutral",
+      "lines": [
+       {
+        "text": "só **baixa** a história",
+        "at": "história nova da"
+       }
+      ]
+     },
+     "right": {
+      "title": "git pull",
+      "at": "git pull baixa",
+      "tone": "good",
+      "lines": [
+       {
+        "text": "baixa **e junta**",
+        "at": "já junta"
+       }
+      ]
+     }
+    },
+    {
+     "type": "statement",
+     "at": "Guarde esta frase",
+     "text": "Commit salva **em casa**",
+     "then": {
+      "text": "Push **compartilha**",
+      "at": "push compartilha",
+      "replace": false
+     }
+    }
+   ],
+   "takeaway": "Commit salva no seu computador. Push compartilha com a equipe."
+  },
+  "9": {
+   "shots": [
+    {
+     "type": "media",
+     "at": "Juntando tudo",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/09-ciclo.png",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "label": "o **ciclo** de todo dia",
+     "calm": true
+    },
+    {
+     "type": "timeline",
+     "at": "você clona uma",
+     "events": [
+      {
+       "label": "clone",
+       "sub": "uma vez",
+       "at": "clona uma vez"
+      },
+      {
+       "label": "commit",
+       "sub": "o tempo todo",
+       "at": "tira fotos"
+      },
+      {
+       "label": "branch",
+       "sub": "cada ideia",
+       "at": "testa ideias"
+      },
+      {
+       "label": "worktree",
+       "sub": "duas frentes",
+       "at": "abre um worktree"
+      },
+      {
+       "label": "merge",
+       "sub": "juntar",
+       "at": "junta com merge"
+      },
+      {
+       "label": "push",
+       "sub": "compartilhar",
+       "at": "compartilha com push"
+      }
+     ]
+    },
+    {
+     "type": "media",
+     "at": "É o ciclo",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/09-ciclo.png",
+     "focus": [
+      0.5,
+      0.6
+     ],
+     "zoom": [
+      1.08,
+      1.15
+     ],
+     "label": "de quem programa **e de quem usa IA**",
+     "calm": true
+    },
+    {
+     "type": "media",
+     "at": "O guia completo",
+     "src": "/home/nmaldaner/projetos/output/explica-git-jardineiro/media/10-guia.png",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "zoom": [
+      1.0,
+      1.05
+     ],
+     "label": "**inema.club** · guia grátis",
+     "calm": true
+    }
+   ],
+   "takeaway": "Clone, commit, branch, merge e push: o ciclo de todo dia."
+  }
+ }
+}

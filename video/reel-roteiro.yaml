@@ -1,0 +1,85 @@
+# reel7etapas — edição 2026-10-17-git-jardim (divulga o guia + vídeo "Git: a história do jardineiro", repo inematds/git-jardineiro)
+tema: "Git explicado como um jardim: mexa no projeto sem medo"
+data: "17/10/2026"
+palavra: GIT
+fala: |
+  Mexeu no projeto e quebrou tudo? Existe um jeito de voltar no tempo. Imagina guardar cada versão do seu trabalho e voltar a qualquer uma, quando quiser. Sem isso, um erro apaga horas, às vezes dias inteiros. E não precisa ser programador: é só pensar num jardim. O nome disso é Git. Cada versão é uma foto do jardim, cada ideia nova ganha o seu canteiro, e no fim você leva tudo para a estufa da equipe, sem ninguém apagar o trabalho do outro. Agora você mexe em tudo sem medo de errar. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "conflito concreto: quebrou o projeto"
+    por_que: "todo mundo que mexe em arquivo já perdeu trabalho; voltar no tempo é o resultado que qualquer um quer"
+    capa: {ganho: "MEXA NO SEU PROJETO SEM MEDO DE PERDER NADA", linha1: "VOLTE NO", linha2: "TEMPO"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Jardim florido de dia, luz natural neutra. Um jardineiro de uns 45 anos, barba curta grisalha, chapéu de palha, camisa clara e avental verde-escuro, olha assustado para um canteiro pisoteado e revirado, com vasos quebrados no chão, segurando a cabeça com as mãos."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "guardar cada versão"
+    por_que: "o desejo é ter todas as versões guardadas e poder voltar"
+    ancora: imagina
+    linha1: "CADA VERSÃO"
+    linha2: "GUARDADA"
+    destaque: {titulo: "VOLTAR", texto: "a qualquer versão,\nquando quiser"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "No mesmo jardim florido de dia, o jardineiro (HOMEM de uns 45 anos, barba curta grisalha, chapéu de palha, camisa clara e avental verde-escuro) sorri diante de um varal de madeira com uma fileira de fotos emolduradas do mesmo jardim em fases diferentes, da terra vazia às flores. Luz neutra de dia."
+  - id: medo
+    nome: MEDO
+    gatilho: "um erro apaga dias"
+    por_que: "perder horas ou dias de trabalho é a dor que todo mundo já sentiu"
+    ancora: erro
+    linha1: "UM ERRO"
+    linha2: "APAGA DIAS"
+    cor: vermelho
+    destaque: {titulo: "SEM VOLTA", texto: "sem versões, o que\nse perde não volta", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "No mesmo jardim, de dia com céu nublado claro, o jardineiro de chapéu de palha e avental verde-escuro, desanimado, ajoelhado diante de um canteiro inteiro arrancado, com mudas murchas e terra espalhada. Luz fria e neutra."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa ser programador"
+    por_que: "derruba a objeção de que versão de arquivo é coisa de programador"
+    ancora: programador
+    linha1: "NÃO PRECISA SER"
+    linha2: "PROGRAMADOR"
+    destaque: {titulo: "UM JARDIM", texto: "é só pensar\nnum jardim"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "No mesmo jardim florido de dia, o jardineiro de chapéu de palha e avental verde-escuro, sorridente, mostra um caderno de esboços com o desenho de um jardim para uma vizinha de uns 60 anos, que sorri entendendo. Luz de dia neutra, rostos bem iluminados."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "o nome disso é Git"
+    por_que: "dá nome à solução e mostra, com a metáfora, foto, canteiro e estufa"
+    ancora: nome
+    linha1: "O NOME DISSO"
+    linha2: "É GIT"
+    destaque: {titulo: "FOTO · CANTEIRO", texto: "commit · branch\ne push"}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "No mesmo jardim de dia, o jardineiro de chapéu de palha e avental verde-escuro tira uma foto do jardim com uma câmera antiga; ao lado, um canteiro novo de flores roxas marcado por uma etiqueta de madeira roxa lisa numa estaca; ao fundo, uma estufa de vidro azulada. Luz neutra, imagem nítida."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "mexer sem medo"
+    por_que: "fecha o resultado: liberdade para mudar tudo sabendo que dá para voltar"
+    ancora: medo
+    linha1: "MEXA EM TUDO"
+    linha2: "SEM MEDO"
+    destaque: {titulo: "SEGURO", texto: "dá para voltar\na qualquer foto"}
+    camera: pan_esq
+    foco: [0.5, 0.5]
+    cena: "No mesmo jardim florido de dia, o jardineiro de chapéu de palha e avental verde-escuro e uma colega jardineira de uns 35 anos, chapéu de palha e macacão jeans, plantam juntos e riem, na porta de uma estufa de vidro azulada. Dia claro, luz natural neutra, clima leve."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou pedir o link"
+    por_que: "dá o caminho (o guia grátis) e uma ação pequena: pedir o link nos comentários"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "guia e vídeo\ncompletos"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, num jardim florido desfocado de dia. Na tela do celular, no alto, um vídeo vertical de um jardim com um jardineiro de chapéu de palha; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "Git explicado como um jardim: mexa no projeto sem medo — reel no modelo de 7 etapas."
+canal: lives1

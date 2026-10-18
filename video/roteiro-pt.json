@@ -1,0 +1,92 @@
+[
+ {
+  "chapter": "Abertura",
+  "title": "Nunca mais perca o seu trabalho",
+  "kind": "statement",
+  "labels": ["clone", "commit", "branch", "worktree", "merge"],
+  "takeaway": "Seis comandos guardam cada versão do seu projeto.",
+  "source": "proprio",
+  "speech": "Com seis comandos você nunca mais perde um dia de trabalho, nem tem medo de mexer no seu projeto. Esses seis comandos são o coração do Git. E o jeito mais fácil de entender o Git é pensar num jardim. Neste vídeo eu explico, passo a passo, como trazer o jardim pra casa, tirar a foto do jardim, testar uma ideia nova, trabalhar em dois canteiros ao mesmo tempo, juntar tudo e compartilhar com a equipe. E no fim eu mostro o ciclo completo num desenho só.",
+  "svg": null
+ },
+ {
+  "chapter": "O jardim",
+  "title": "Cada peça do Git no jardim",
+  "kind": "flow",
+  "labels": ["jardim = projeto", "plantas = arquivos", "foto = commit", "etiqueta = branch", "estufa = remoto"],
+  "takeaway": "Projeto é o jardim; commit é a foto do jardim inteiro.",
+  "source": "proprio",
+  "speech": "Primeiro, o dicionário do jardineiro. O jardim é o seu projeto. As plantas são os arquivos. Cada commit é uma foto do jardim inteiro, guardada com data e uma frase. A branch é uma etiqueta que aponta para uma dessas fotos. E lá longe tem uma estufa, que é o repositório remoto, onde fica a cópia que a equipe toda compartilha, por exemplo no GitHub.",
+  "svg": null
+ },
+ {
+  "chapter": "1 · Clone",
+  "title": "Clone: trazer o jardim pra casa",
+  "kind": "flow",
+  "labels": ["estufa (remoto)", "git clone", "seu computador", "pasta de trabalho"],
+  "takeaway": "Clone copia o projeto e toda a história para o seu computador.",
+  "source": "proprio",
+  "speech": "Passo um, o clone. Você vai até a estufa e traz o jardim pra casa. O comando git clone copia o projeto inteiro e também toda a história dele, cada foto que já foi tirada. No seu computador aparece uma pasta com os arquivos prontos pra editar. Repare: você não mexe na estufa. Você mexe na sua cópia, com calma.",
+  "svg": null
+ },
+ {
+  "chapter": "2 · Commit",
+  "title": "Commit: a foto do jardim",
+  "kind": "pipeline",
+  "labels": ["editar", "git add", "área de preparo", "git commit", "história local"],
+  "takeaway": "Edite, separe o que entra e tire a foto. Commit não envia nada.",
+  "source": "proprio",
+  "speech": "Passo dois, o commit. Você planta, arranca, faz um caminho de pedras. Isso é editar os arquivos. Depois você escolhe o que vai entrar na foto, com git add. Essas mudanças ficam numa bandeja, a área de preparo. Aí o git commit tira a foto e guarda no seu histórico, com uma frase, por exemplo, adicionei o caminho. O git status mostra o que mudou a qualquer momento. E atenção: o commit não envia nada pra ninguém. Ele salva só no seu computador.",
+  "svg": null
+ },
+ {
+  "chapter": "3 · Branch",
+  "title": "Branch: testar uma ideia nova",
+  "kind": "timeline",
+  "labels": ["main", "git switch -c flores", "commit D", "commit E"],
+  "takeaway": "Branch é uma etiqueta que anda com os seus commits novos.",
+  "source": "proprio",
+  "speech": "Passo três, a branch. Bateu uma ideia: e se eu fizer um canteiro de flores? Você não precisa arriscar o jardim principal. Com git switch traço c flores, você cria uma etiqueta nova chamada flores e passa a trabalhar nela. Cada foto nova faz a etiqueta andar junto. A main continua parada onde estava. Se a ideia não der certo, é só voltar.",
+  "svg": null
+ },
+ {
+  "chapter": "4 · Worktree",
+  "title": "Worktree: dois canteiros ao mesmo tempo",
+  "kind": "compare",
+  "labels": ["pasta jardim: flores", "pasta jardim-main: main", "mesma história", "preparo separado"],
+  "takeaway": "Worktree é outra pasta do mesmo projeto, em outra branch.",
+  "source": "proprio",
+  "speech": "Passo quatro, o worktree. No meio das flores, alguém avisa que a cerca quebrou e precisa de conserto agora, na main. Em vez de largar tudo, você abre uma segunda pasta com git worktree add. Numa pasta você continua nas flores, na outra você conserta a cerca. As duas usam a mesma história, mas cada uma tem a sua própria bandeja. Isso é ótimo também pra deixar um agente de IA trabalhando numa pasta enquanto você trabalha na outra.",
+  "svg": null
+ },
+ {
+  "chapter": "5 · Merge",
+  "title": "Merge: juntar as mudanças",
+  "kind": "flow",
+  "labels": ["main", "flores", "git merge flores", "commit M", "conflito: resolver"],
+  "takeaway": "Merge junta duas histórias num commit novo.",
+  "source": "proprio",
+  "speech": "Passo cinco, o merge. A cerca está consertada e as flores ficaram lindas. Agora você volta pra main e roda git merge flores. O Git junta as duas histórias num commit novo, que liga os dois caminhos. Às vezes as duas mudanças mexeram no mesmo lugar, isso é um conflito. Sem pânico: você escolhe como fica, faz git add e git commit, e pronto. Depois, teste o jardim junto.",
+  "svg": null
+ },
+ {
+  "chapter": "6 · Push",
+  "title": "Push: compartilhar com a equipe",
+  "kind": "flow",
+  "labels": ["seu computador", "git push", "estufa (remoto)", "git pull"],
+  "takeaway": "Commit salva no seu computador. Push compartilha com a equipe.",
+  "source": "proprio",
+  "speech": "Passo seis, o push. Até aqui, tudo ficou só no seu computador. O git push leva as suas fotos para a estufa e atualiza a branch lá. Agora a equipe pode pegar o seu trabalho. E o caminho de volta também existe: git fetch baixa a história nova da estufa, e git pull baixa e já junta na sua branch. Guarde esta frase: commit salva em casa, push compartilha.",
+  "svg": null
+ },
+ {
+  "chapter": "O ciclo",
+  "title": "O ciclo do jardineiro",
+  "kind": "timeline",
+  "labels": ["clone", "commit", "branch", "merge", "push"],
+  "takeaway": "Clone, commit, branch, merge e push: o ciclo de todo dia.",
+  "source": "proprio",
+  "speech": "Juntando tudo: você clona uma vez, tira fotos o tempo todo com commit, testa ideias em branches, abre um worktree quando precisa de duas frentes, junta com merge e compartilha com push. É o ciclo de todo dia de quem programa, e também de quem trabalha com agentes de IA. O guia completo, com os comandos e os desenhos, está no inema ponto club, de graça.",
+  "svg": null
+ }
+]

@@ -3,7 +3,15 @@
   "title": "Git is a garden",
   "tagline": "the gardener's story",
   "meta": "Git explained as a garden: clone, commit, branch, worktree, merge, and push with drawings, commands, and a video. Free, from INEMA.CLUB.",
-  "nav": {"oque": "What it is", "passos": "The 6 steps", "video": "Video", "cola": "Cheat sheet", "github": "GitHub", "tema": "Switch theme", "voltar": "← Guide"},
+  "nav": {
+    "oque": "What it is",
+    "passos": "The 6 steps",
+    "video": "Video",
+    "cola": "Cheat sheet",
+    "github": "GitHub",
+    "tema": "Switch theme",
+    "voltar": "← Guide"
+  },
   "hero": {
     "chip": "Git without fear · in 6 steps",
     "h1": "Git is a <span class=\"amb\">garden</span>",
@@ -20,12 +28,36 @@
     "sub": "Before the commands, the metaphor. Each part of Git has a place in the garden — keep this table handy and the rest is easy.",
     "alt_grade": "The six steps: clone, commit, branch, worktree, merge, and push",
     "cards": [
-      ["🌱", "Garden = project", "The whole project folder, with everything inside it."],
-      ["🌿", "Plants = files", "Every file you create, edit, or delete."],
-      ["📸", "Photo = commit", "A photo of the whole garden, with a date and a note saying what changed."],
-      ["🏷️", "Label = branch", "A name that points to a photo and moves along when you take new photos."],
-      ["🪴", "Flower bed = worktree", "Another folder for the same project, so you can work on two things at the same time."],
-      ["🏡", "Greenhouse = remote", "The shared copy for the team, for example on GitHub."]
+      [
+        "🌱",
+        "Garden = project",
+        "The whole project folder, with everything inside it."
+      ],
+      [
+        "🌿",
+        "Plants = files",
+        "Every file you create, edit, or delete."
+      ],
+      [
+        "📸",
+        "Photo = commit",
+        "A photo of the whole garden, with a date and a note saying what changed."
+      ],
+      [
+        "🏷️",
+        "Label = branch",
+        "A name that points to a photo and moves along when you take new photos."
+      ],
+      [
+        "🪴",
+        "Flower bed = worktree",
+        "Another folder for the same project, so you can work on two things at the same time."
+      ],
+      [
+        "🏡",
+        "Greenhouse = remote",
+        "The shared copy for the team, for example on GitHub."
+      ]
     ],
     "img": "02-dicionario.jpg",
     "img_alt": "Illustration: a garden seen from above, with flower beds, a board showing a garden photo, a label on a stake, and the greenhouse in the background"
@@ -39,8 +71,8 @@
     "chip": "Video",
     "h2": "Watch the gardener's story",
     "sub": "The full explainer video, with drawings and animated commands, plus a short reel to send to someone who needs it.",
-    "longo": "Full video (16:9)",
-    "reel": "Reel (9:16)",
+    "longo": "Full video (16:9, in Portuguese)",
+    "reel": "Reel (9:16, in Portuguese)",
     "baixar": "Download MP4"
   },
   "cola": {
@@ -49,16 +81,46 @@
     "sub": "Print it, save it, or keep it open next to the terminal.",
     "frase": "Commit saves at home. Push shares with the team.",
     "linhas": [
-      ["git clone <url> garden", "bring the project and its history to your computer"],
-      ["git status", "see what changed and what is in the staging area"],
-      ["git add .", "put the changes in the staging area"],
-      ["git commit -m \"frase\"", "take the photo: save the version on your computer"],
-      ["git switch -c flowers", "create the flowers label and work on it"],
-      ["git worktree add ../garden-main main", "open another folder, on another branch"],
-      ["git merge flowers", "bring the flowers branch into the current branch"],
-      ["git push origin main", "take your photos to the greenhouse"],
-      ["git fetch", "download the greenhouse's new history without joining it"],
-      ["git pull", "download and join it into your branch" ]
+      [
+        "git clone <url> garden",
+        "bring the project and its history to your computer"
+      ],
+      [
+        "git status",
+        "see what changed and what is in the staging area"
+      ],
+      [
+        "git add .",
+        "put the changes in the staging area"
+      ],
+      [
+        "git commit -m \"frase\"",
+        "take the photo: save the version on your computer"
+      ],
+      [
+        "git switch -c flowers",
+        "create the flowers label and work on it"
+      ],
+      [
+        "git worktree add ../garden-main main",
+        "open another folder, on another branch"
+      ],
+      [
+        "git merge flowers",
+        "bring the flowers branch into the current branch"
+      ],
+      [
+        "git push origin main",
+        "take your photos to the greenhouse"
+      ],
+      [
+        "git fetch",
+        "download the greenhouse's new history without joining it"
+      ],
+      [
+        "git pull",
+        "download and join it into your branch"
+      ]
     ]
   },
   "passo": "Step",
@@ -71,67 +133,292 @@
   "proximo": "Next:",
   "conceitos": [
     {
-      "slug": "clone", "nome": "Clone", "titulo": "Bring the garden home", "img": "03-clone.jpg",
+      "slug": "clone",
+      "nome": "Clone",
+      "titulo": "Bring the garden home",
+      "img": "03-clone.jpg",
       "img_alt": "Illustration: a blue ribbon carries the garden photo from the greenhouse to the gardener's laptop",
       "resumo": "Clone copies the project and its entire history to your computer.",
       "metafora": "You go to the greenhouse and bring home a copy of the whole garden, with every photo taken so far. The greenhouse stays there, untouched.",
-      "texto": ["The git clone command downloads the remote repository: the current files and the full commit history. A folder ready for editing appears on your computer, called the working tree.", "You do not touch the greenhouse. You work on your copy, at your own pace, and decide later what to share."],
-      "cmds": [["git clone <url-do-repo> garden", "copy the project and its history"], ["cd garden", "go into the working folder"]],
+      "texto": [
+        "The git clone command downloads the remote repository: the current files and the full commit history. A folder ready for editing appears on your computer, called the working tree.",
+        "You do not touch the greenhouse. You work on your copy, at your own pace, and decide later what to share."
+      ],
+      "cmds": [
+        [
+          "git clone <url-do-repo> garden",
+          "copy the project and its history"
+        ],
+        [
+          "cd garden",
+          "go into the working folder"
+        ]
+      ],
       "dica": "You clone once per project. After that, use git pull to get updates from the team.",
-      "graph": {"main": ["A"], "labels": {"A": "first garden"}}
+      "graph": {
+        "main": [
+          "A"
+        ],
+        "labels": {
+          "A": "first garden"
+        }
+      }
     },
     {
-      "slug": "commit", "nome": "Commit", "titulo": "Take a photo of the garden", "img": "04-commit.jpg",
+      "slug": "commit",
+      "nome": "Commit",
+      "titulo": "Take a photo of the garden",
+      "img": "04-commit.jpg",
       "img_alt": "Illustration: the gardener lays a stone path, with a tray of seedlings and a photo cabinet nearby",
       "resumo": "Edit, choose what to include, and take the photo. The commit saves it on your computer.",
       "metafora": "You plant, pull things out, and make a stone path. Then you put only what you want to show on the tray and take a photo, which goes into the photo cabinet.",
-      "texto": ["There are three places: the working tree (where you edit), the staging area (the tray with what will go into the photo), and the local history (the cabinet with the photos, or commits).", "git add puts changes on the tray. git commit takes a photo of what is on the tray and saves it with a note. git status shows what has changed and what is already on the tray at any time."],
-      "cmds": [["git status", "what changed?"], ["git add .", "put everything on the tray"], ["git commit -m \"Add the path\"", "take photo B"]],
+      "texto": [
+        "There are three places: the working tree (where you edit), the staging area (the tray with what will go into the photo), and the local history (the cabinet with the photos, or commits).",
+        "git add puts changes on the tray. git commit takes a photo of what is on the tray and saves it with a note. git status shows what has changed and what is already on the tray at any time."
+      ],
+      "cmds": [
+        [
+          "git status",
+          "what changed?"
+        ],
+        [
+          "git add .",
+          "put everything on the tray"
+        ],
+        [
+          "git commit -m \"Add the path\"",
+          "take photo B"
+        ]
+      ],
       "dica": "A commit does not send anything to anyone. It saves only on your computer.",
-      "graph": {"main": ["A", "B"], "labels": {"A": "first garden", "B": "path"}}
+      "graph": {
+        "main": [
+          "A",
+          "B"
+        ],
+        "labels": {
+          "A": "first garden",
+          "B": "path"
+        }
+      }
     },
     {
-      "slug": "branch", "nome": "Branch", "titulo": "Try a new idea", "img": "05-branch.jpg",
+      "slug": "branch",
+      "nome": "Branch",
+      "titulo": "Try a new idea",
+      "img": "05-branch.jpg",
       "img_alt": "Illustration: the gardener plants a new flower bed, marked with a purple label",
       "resumo": "A branch is a label that moves along with your new commits.",
       "metafora": "You get an idea for a flower bed. Instead of risking the main garden, you hang up a new label, flowers, and work on it.",
-      "texto": ["A branch is just a name that points to a commit. When you make a new commit, the branch you are on moves along with it. The others stay put.", "HEAD shows where you are working now. With git switch -c flowers, you create the flowers branch and switch to it. If the idea does not work out, go back to main with git switch main."],
-      "cmds": [["git switch -c flowers", "create the flowers label and switch to it"], ["git add . && git commit -m \"Flowers (1)\"", "commit D"], ["git commit -am \"More flowers (2)\"", "commit E"]],
+      "texto": [
+        "A branch is just a name that points to a commit. When you make a new commit, the branch you are on moves along with it. The others stay put.",
+        "HEAD shows where you are working now. With git switch -c flowers, you create the flowers branch and switch to it. If the idea does not work out, go back to main with git switch main."
+      ],
+      "cmds": [
+        [
+          "git switch -c flowers",
+          "create the flowers label and switch to it"
+        ],
+        [
+          "git add . && git commit -m \"Flowers (1)\"",
+          "commit D"
+        ],
+        [
+          "git commit -am \"More flowers (2)\"",
+          "commit E"
+        ]
+      ],
       "dica": "HEAD → flowers means: the next commits will go to the flowers branch.",
-      "graph": {"main": ["A", "B"], "side": ["D", "E"], "from": "B", "side_name": "flowers", "labels": {"A": "first", "B": "path", "D": "flowers 1", "E": "flowers 2"}}
+      "graph": {
+        "main": [
+          "A",
+          "B"
+        ],
+        "side": [
+          "D",
+          "E"
+        ],
+        "from": "B",
+        "side_name": "flowers",
+        "labels": {
+          "A": "first",
+          "B": "path",
+          "D": "flowers 1",
+          "E": "flowers 2"
+        }
+      }
     },
     {
-      "slug": "worktree", "nome": "Worktree", "titulo": "Two flower beds at the same time", "img": "06-worktree.jpg",
+      "slug": "worktree",
+      "nome": "Worktree",
+      "titulo": "Two flower beds at the same time",
+      "img": "06-worktree.jpg",
       "img_alt": "Illustration: two flower beds connected to the same photo cabinet; flowers grow in one while the fence is repaired in the other",
       "resumo": "A worktree is another folder for the same project, open on another branch.",
       "metafora": "While you are working among the flowers, the fence breaks and needs to be fixed right away. You open a second flower bed: keep working on the flowers in one, fix the fence in the other.",
-      "texto": ["git worktree add creates a second working folder connected to the same repository. Both folders share the same history (the same .git folder), but each has its own staging area and branch.", "It is great for handling an urgent task without dropping what you are doing, and for letting an AI agent work in one folder while you work in the other."],
-      "cmds": [["git worktree add ../garden-main main", "open main in another folder"], ["cd ../garden-main", "go there"], ["git commit -am \"Fix the fence\"", "commit C on main"]],
+      "texto": [
+        "git worktree add creates a second working folder connected to the same repository. Both folders share the same history (the same .git folder), but each has its own staging area and branch.",
+        "It is great for handling an urgent task without dropping what you are doing, and for letting an AI agent work in one folder while you work in the other."
+      ],
+      "cmds": [
+        [
+          "git worktree add ../garden-main main",
+          "open main in another folder"
+        ],
+        [
+          "cd ../garden-main",
+          "go there"
+        ],
+        [
+          "git commit -am \"Fix the fence\"",
+          "commit C on main"
+        ]
+      ],
       "dica": "The same branch cannot be open in two folders at the same time.",
-      "graph": {"main": ["A", "B", "C"], "side": ["D", "E"], "from": "B", "side_name": "flowers", "labels": {"A": "first", "B": "path", "C": "fence", "D": "flowers 1", "E": "flowers 2"}}
+      "graph": {
+        "main": [
+          "A",
+          "B",
+          "C"
+        ],
+        "side": [
+          "D",
+          "E"
+        ],
+        "from": "B",
+        "side_name": "flowers",
+        "labels": {
+          "A": "first",
+          "B": "path",
+          "C": "fence",
+          "D": "flowers 1",
+          "E": "flowers 2"
+        }
+      }
     },
     {
-      "slug": "merge", "nome": "Merge", "titulo": "Bring the changes together", "img": "07-merge.jpg",
+      "slug": "merge",
+      "nome": "Merge",
+      "titulo": "Bring the changes together",
+      "img": "07-merge.jpg",
       "img_alt": "Illustration: two stone paths meet and become one in the garden",
       "resumo": "Merge brings two histories together in a new commit.",
       "metafora": "The fence is fixed and the flowers look beautiful. Now the two paths meet: one garden with everything in it.",
-      "texto": ["On main, git merge flowers brings in the history of the flowers branch. Git creates commit M, which has two parents: the latest commit on main and the latest one on flowers.", "If both changes touched the same part, a conflict appears. Do not panic: open the file, choose what it should look like, then run git add and git commit. Finally, test the garden as a whole."],
-      "cmds": [["git switch main", "go back to main"], ["git merge flowers", "bring in the flowers (commit M)"], ["# in case of conflict: edit, then", ""], ["git add . && git commit", "finish the merge"]],
+      "texto": [
+        "On main, git merge flowers brings in the history of the flowers branch. Git creates commit M, which has two parents: the latest commit on main and the latest one on flowers.",
+        "If both changes touched the same part, a conflict appears. Do not panic: open the file, choose what it should look like, then run git add and git commit. Finally, test the garden as a whole."
+      ],
+      "cmds": [
+        [
+          "git switch main",
+          "go back to main"
+        ],
+        [
+          "git merge flowers",
+          "bring in the flowers (commit M)"
+        ],
+        [
+          "# in case of conflict: edit, then",
+          ""
+        ],
+        [
+          "git add . && git commit",
+          "finish the merge"
+        ]
+      ],
       "dica": "A completed merge is not a tested merge. Run the project before sharing it.",
-      "graph": {"main": ["A", "B", "C", "M"], "side": ["D", "E"], "from": "B", "into": "M", "side_name": "flowers", "labels": {"A": "first", "B": "path", "C": "fence", "M": "merge", "D": "flowers 1", "E": "flowers 2"}}
+      "graph": {
+        "main": [
+          "A",
+          "B",
+          "C",
+          "M"
+        ],
+        "side": [
+          "D",
+          "E"
+        ],
+        "from": "B",
+        "into": "M",
+        "side_name": "flowers",
+        "labels": {
+          "A": "first",
+          "B": "path",
+          "C": "fence",
+          "M": "merge",
+          "D": "flowers 1",
+          "E": "flowers 2"
+        }
+      }
     },
     {
-      "slug": "push", "nome": "Push", "titulo": "Share with the team", "img": "08-push.jpg",
+      "slug": "push",
+      "nome": "Push",
+      "titulo": "Share with the team",
+      "img": "08-push.jpg",
       "img_alt": "Illustration: the gardener takes a cart of photos to the greenhouse, where a teammate greets them",
       "resumo": "Push sends your commits to the remote. Now the team can get them.",
       "metafora": "So far, everything has stayed at home. Now you take the cart of photos to the greenhouse, and your teammate can see the new garden.",
-      "texto": ["git push sends your commits to the remote repository and updates the branch there. After that, the team can see the same history as you.", "The way back: git fetch downloads the greenhouse's new history without changing your files; git pull downloads it and brings it into the branch you are on."],
-      "cmds": [["git push origin main", "send main to the greenhouse"], ["git fetch", "only download the new history"], ["git pull", "download and bring it in"]],
+      "texto": [
+        "git push sends your commits to the remote repository and updates the branch there. After that, the team can see the same history as you.",
+        "The way back: git fetch downloads the greenhouse's new history without changing your files; git pull downloads it and brings it into the branch you are on."
+      ],
+      "cmds": [
+        [
+          "git push origin main",
+          "send main to the greenhouse"
+        ],
+        [
+          "git fetch",
+          "only download the new history"
+        ],
+        [
+          "git pull",
+          "download and bring it in"
+        ]
+      ],
       "dica": "Commit saves at home. Push shares with the team.",
-      "graph": {"main": ["A", "B", "C", "M"], "side": ["D", "E"], "from": "B", "into": "M", "side_name": "flowers", "remote": true, "labels": {"A": "first", "B": "path", "C": "fence", "M": "merge", "D": "flowers 1", "E": "flowers 2"}}
+      "graph": {
+        "main": [
+          "A",
+          "B",
+          "C",
+          "M"
+        ],
+        "side": [
+          "D",
+          "E"
+        ],
+        "from": "B",
+        "into": "M",
+        "side_name": "flowers",
+        "remote": true,
+        "labels": {
+          "A": "first",
+          "B": "path",
+          "C": "fence",
+          "M": "merge",
+          "D": "flowers 1",
+          "E": "flowers 2"
+        }
+      }
     }
   ],
-  "graph_txt": {"remote": "greenhouse (origin/main) after push"},
-  "fim": {"img": "09-ciclo.jpg", "alt": "Illustration: the whole garden connected by a circular path, with the two gardeners waving", "h2": "The daily cycle", "texto": "Clone once. After that: commit often, branch for each idea, worktree when you need two things at once, merge to bring them together, and push to share."},
-  "footer": {"nota": "original and free content", "stack": ["Git", "static HTML", "explicavideos"]}
+  "graph_txt": {
+    "remote": "greenhouse (origin/main) after push"
+  },
+  "fim": {
+    "img": "09-ciclo.jpg",
+    "alt": "Illustration: the whole garden connected by a circular path, with the two gardeners waving",
+    "h2": "The daily cycle",
+    "texto": "Clone once. After that: commit often, branch for each idea, worktree when you need two things at once, merge to bring them together, and push to share."
+  },
+  "footer": {
+    "nota": "original and free content",
+    "stack": [
+      "Git",
+      "static HTML",
+      "explicavideos"
+    ]
+  }
 }

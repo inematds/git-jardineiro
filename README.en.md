@@ -12,6 +12,14 @@ This free guide explains Git through the story of a gardener. Git is a tool that
 
 Full guide (landing + 6 explainer pages): **https://inematds.github.io/git-jardineiro/guia/en/**
 
+## 🎬 Videos
+
+- Explainer 16:9 (3 min, Portuguese): https://github.com/inematds/git-jardineiro/releases/download/video-v1.0.0/git-jardineiro-16x9.mp4
+- Reel 9:16 (31 s, Portuguese): https://github.com/inematds/git-jardineiro/releases/download/video-v1.0.0/git-jardineiro-reel.mp4
+- Players in the guide: https://inematds.github.io/git-jardineiro/guia/en/#video
+
+Script and visual script are in `video/`.
+
 ## The 6 steps
 
 1. **Clone** — Bring the garden home: Clone copies the project and its entire history to your computer. (https://inematds.github.io/git-jardineiro/guia/en/clone/)

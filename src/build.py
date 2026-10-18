@@ -207,7 +207,7 @@ def construir(lang, videos):
   <div class="vids">
     <div><h3>{esc(v['longo'])}</h3><video controls preload="metadata" playsinline poster="{a0}{videos['poster']}"><source src="{videos['longo']}" type="video/mp4"></video>
       <p><a href="{videos['longo']}">{esc(v['baixar'])}</a>{f' · <a href="{videos["yt_longo"]}">YouTube</a>' if videos.get('yt_longo') else ''}</p></div>
-    <div class="v916"><h3>{esc(v['reel'])}</h3><video controls preload="metadata" playsinline><source src="{videos['reel']}" type="video/mp4"></video>
+    <div class="v916"><h3>{esc(v['reel'])}</h3><video controls preload="metadata" playsinline poster="{a0}{videos['poster_reel']}" style="aspect-ratio:9/16;object-fit:cover"><source src="{videos['reel']}" type="video/mp4"></video>
       <p><a href="{videos['reel']}">{esc(v['baixar'])}</a>{f' · <a href="{videos["yt_reel"]}">YouTube</a>' if videos.get('yt_reel') else ''}</p></div>
   </div>
 </div></section>"""
