@@ -4,3 +4,9 @@
 - FEITO: r7e edicoes/2026-10-17-git-jardim (roteiro + 7 imagens; imagem 2 sendo refeita: saiu mulher).
 - ESPERANDO: "pode fazer" do Nei para o HeyGen (vídeo ~4,3 min + reel ~40 s). Sem isso, nada de avatar.
 - PRÓXIMO: APROVADO_HEYGEN nos dois → heygen-studio.mjs (bloco pt-b01) + reel7etapas fazer → render v1 → visual v2 → render → src/videos.json + release → portal + Telegram INEMA.DEV.
+
+## 17/10 22:15
+- APROVADO pelo Nei ("pode gerar e me mande no v3 e coloque no projeto"). Vídeo enviado: HeyGen 33793dad8fcb454199e385ee87a10137 (manifest submitted). Reel: reel7etapas.py avatar rodando (pending).
+- Visual v2 pronto: output/explica-git-jardineiro/visual/pt-b01.json (gerar_visual.py; deixas OK; validar_visual OK).
+- Em fundo: baixa_blocos.sh (vídeo) e cadeia avatar→fazer (reel).
+- Depois: render v1 (produce_blocks + wait_assembly) → v2 (setup_output, build_block 1 --strict, run_lane, assemble) → 720p → bot v3 (vídeo + reel) → release video-v1.0.0 no repo + src/videos.json + build + push → portal + Telegram INEMA.DEV.
