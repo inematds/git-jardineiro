@@ -10,3 +10,9 @@
 - Visual v2 pronto: output/explica-git-jardineiro/visual/pt-b01.json (gerar_visual.py; deixas OK; validar_visual OK).
 - Em fundo: baixa_blocos.sh (vídeo) e cadeia avatar→fazer (reel).
 - Depois: render v1 (produce_blocks + wait_assembly) → v2 (setup_output, build_block 1 --strict, run_lane, assemble) → 720p → bot v3 (vídeo + reel) → release video-v1.0.0 no repo + src/videos.json + build + push → portal + Telegram INEMA.DEV.
+
+## 17/10 23:45 — quase fechado
+- Vídeo 16:9 (3min00s) renderizado, conferido em 24 quadros, no bot v3 (msg 1528) e na release video-v1.0.0; reel (31 s) aprovado nos portões, no bot v3 e na release.
+- Guia com players (PT/EN/ES), push 3743e39. Portal d187a39 + inemabuscas 504c4e9 + inemapro a045f95/2540f63.
+- Telegram INEMA.DEV: envio agendado para 23:57 (janela do sync).
+- Sem YouTube (não pedido).
