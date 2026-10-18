@@ -16,3 +16,4 @@
 - Guia com players (PT/EN/ES), push 3743e39. Portal d187a39 + inemabuscas 504c4e9 + inemapro a045f95/2540f63.
 - Telegram INEMA.DEV: envio agendado para 23:57 (janela do sync).
 - Sem YouTube (não pedido).
+- 23:57 Telegram INEMA.DEV: tópico https://t.me/c/2389955773/7359 (15 msgs), MENU msg 7375.
